@@ -3,7 +3,7 @@
 We Craete A clone project of Ecommerce website that name is www.GeeksBuying.Com
 Team :
 
-1.Biswarup Bhunia
+1.Biswarup Bhunia(Team Leader)
 2.Kunal Deotale
 3.Abhishek Kumar
 4.Nitin Kumar
