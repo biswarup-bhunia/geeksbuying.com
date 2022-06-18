@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 100%;
+            height: 170px;
+            border: 1px solid red;
+        }
+        .box{
+            width: 100%;
+            height: 40px;
+            border: 1px solid transparent;
+            display: flex;
+            justify-content: end;
+            background-color: #2a89fc ;
+        }
+        .box select{
+            margin-left: 25px;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        .box>div{
+            background-color:#2a89fc ;
+            border-color: #2a89fc;
+        }
+        .box1{
+            width: 100%;
+            height: 85px;
+            border: 1px solid transparent;
+            display: grid;
+            grid-template-columns: 400px 730px 450px;
+            grid-template-rows: auto;
+            background-color: #1477fe;
+        }
+        .box1>div{
+            border: 1px solid transparent                                ;
+        }
+        .box1>div:first-child{
+            background-color:#1477fe;
+        }
+        .box1>div:nth-child(2){
+            background-color: white;
+            width: 680px;
+            height: 50px;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+        .style{
+            width:58%;
+            margin-left: 60px;
+           
+        }
+        #box3{
+            display: flex;
+            justify-content: center;
+            align-items:center ;
+        }
+        #box3>div:nth-child(3){
+            width: 8%;
+            height: 50px;
+            border: 1px solid transparent;
+        }
+        #box3>div>img{
+            width: 90%;
+            margin-top: 4px;
+            margin-left: 2px;
+        }
+        #box4{
+            margin-left: 50px;
+            border: 1px solid transparent;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+        #box4>div{
+            border: 1px solid transparent;
+        }
+        #box5>div{
+            border: 1px solid transparent;
+        }
+        #box6{
+            display: flex;
+            height: 30px;
+        }
+        #box7{
+            display: grid;
+            grid-template-columns:50% 50%;
+            
+        }
+        #box7 h6{
+            color: white;
+            font-size: 18px;
+            margin-top: 25px;
+            cursor: pointer;
+        }
+        .school{
+            border: 1px solid transparent;
+            width: 100%;
+            height: 41px;
+            display: grid;
+            grid-template-columns: repeat(9,120px);
+            background-color: #1477fe;
+            
+            
+
+        }
+        .school>div{
+            border: 1px solid transparent;
+            color : white;
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+        }
+        .school>div:first-child{
+            display: flex;
+        }
+        h1{
+            width: 23%;
+            margin: auto;
+            margin-top: 20px;
+            font-size: 40px;
+        
+        }
+        #thor{
+            width: 70%;
+            display: grid;
+            border: 1px solid transparent;
+            margin: auto;
+            margin-top: 30px;
+            grid-template-columns: repeat(7,1fr);
+            grid-template-rows: auto;
+            gap: 1px;
+            justify-content: center;
+            align-items: center;
+        }
+        #thor img{
+            width: 40%;
+            margin-left: 40px;
+            cursor: pointer;
+        }
+        #thor>div{
+            border: 1px solid transparent;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        #thor h5{
+            text-align: center;
+            cursor: pointer;
+        }
+        #thor>div:nth-child(4){
+        margin-top: 13px;
+        }
+        #thor>div:nth-child(11){
+        margin-top: 13px;
+        }
+        #thor+div>img{
+            width: 10%;
+        }
+        #phone{
+            width: 100%;
+            height: 30px;
+            border: 1px solid transparent;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        #phone>div:first-child{
+            border: 1px solid transparent;
+            width: 35%;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: repeat(4,1fr);
+
+        }
+        #phone>div:last-child{
+            border: 1px solid transparent;
+            width: 30%;
+            display: flex;
+        }
+        #phone1>div{
+            border: 1px solid transparent;
+            width: 70%;
+            gap: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-right: 10px;
+            border-color: grey;
+            padding: 0px 10px 0px 5px;
+            cursor: pointer;
+        }
+        #phone1>div:first-child{
+            margin-left: 10px;
+        }
+        #phone1>button{
+            width: 60%;
+            border-color: grey;
+            padding: 3px 10px 3px 5px;
+            cursor: pointer;
+        }
+        #phone>div>div{
+            border: 1px solid transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #phone2>div:first-child{
+            width: 150px; 
+            margin-left: 80px;
+        }
+        #phone2>div:last-child{
+            margin-left: 150px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        #phone2>select{
+            cursor: pointer;
+        }
+       hr{
+        margin-top: 20px;
+       }
+       #last{
+        width: 95%;
+        margin: auto;
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: auto;
+        gap: 25px;
+        
+       }
+       #last img{
+        cursor:pointer;
+       }
+       #last h3{
+        cursor:  pointer;
+       }
+       strike{
+        margin-left: 10px;
+        font-size: 13px;
+       }
+       #last button{
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 35px;
+        cursor: pointer;
+       }
+       #last button:hover{
+        background-color: green;
+        color: white;
+        border-color: pink;
+       }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box">
+            <div>
+                <select  style="background-color: #2a89fc;color:white; border-color: #2a89fc; " name="" id="">
+                    <option value="">Save BIG with our app!</option>
+                </select>
+            </div>
+            <div>
+                <select style="background-color: #2a89fc;color:white;  border-color: #2a89fc;" name="" id="hover1">
+                    <option value="">Language</option>
+                    <option value="">English</option>
+                    <option value="">Hindi</option>
+                    <option value="">Marathi</option>
+                    <option value="">Tamil</option>
+                    <option value="">Japnese</option>
+                    <option value="">Chinese</option>
+                </select>
+            </div>
+            <div>
+                <select  style="background-color: #2a89fc;color:white;margin-right: 25px; border-color: #2a89fc; "name="" id="">
+                    <option value="">Support Center</option>
+                </select>
+            </div>
+        </div>
+        <div class="box1">
+            <div>
+               <a href="https://www.geekbuying.com/"> <img class="style"  src="https://i.ibb.co/mT6YcPD/Screenshot-110-01.jpg" alt=""></a>
+            </div>
+            <div id="box3">
+                <div>
+                <select style="font-size: 20px ;border:none ;margin-left: 10px;" name="" id="">
+                    <option value="">All Categories</option>
+                </select>
+            </div>
+            <div>
+                <input style="padding:10px 285px 10px 10px;margin-left: 5px;" type="button" value="Search by Keywords............">
+            </div>
+            <div >
+                <img src="https://media.istockphoto.com/photos/magnifier-glass-picture-id519752711?b=1&k=20&m=519752711&s=170667a&w=0&h=HalwVk67OygzmYD6Uh8qhwCUWEot8bXDHKYLKs9Dsnc=" alt="">   
+            </div>
+            </div>
+            <div id="box4">
+                  <div id="box5">
+                    <div style="margin-top: 10px;margin-left:30px;width:40%;color: white;font-size: 16px;">Ship to</div>
+                    <div id="box6"><img style="width:26%;margin-left: 30px;" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png" alt=""> 
+                    <h6 style="margin-top:4px ;font-size: 20px;color:white ;margin-left: 5px;font-weight: lighter;">/ INR</h6>
+                    </div>
+                  </div>
+                  <div>
+                    <div id="box7">
+                        <img style="width: 70%;margin-top: 20px;margin-left: 15px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcujW47zt-z5EheJk4uquGtCawLIgiiZC-Sg&usqp=CAU" alt="">
+                       <h6>Sign  up</h6>
+                    </div>
+                  </div>
+                  <div>
+                    <img style="width: 30%;margin-top: 17px;margin-left: 10px;" src="data:image/png;base64,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" alt="">
+                  </div>
+            </div>
+        </div>
+     <div class="school">
+        <div style="margin-left: 25px;">
+            <span> <img style="width: 80%;margin-top: 1px;margin-left: 5px;" src="https://i.stack.imgur.com/QuyFJ.png" alt=""></span>
+            <span style="margin-top: px;color: white;font-size: 15px;">Categories</span>
+        </div>
+        <div >New</div>
+        <div>Bestselling</div>
+        <div>Brand</div>
+        <div>Clearance</div>
+        <div>Deals</div>
+        <div>Coupon</div>
+        <div>App Only</div>
+     </div>
+    </div>
+    <h1>App Exclusive Deals</h1>
+    <div id="thor"></div>
+    <div id="phone">
+        <div id="phone1">
+            <div>Sort By   :</div>
+            <div>Best Match</div>
+            <div>New Arrival</div>
+            <button>Price</button>
+         </div>
+        <div id="phone2">
+            <div>Filter :</div>
+            
+            <div><select name="Ship From" id="">
+                <option value="">Ship From</option>
+                <option value="">Europe</option>
+                <option value="">Poland</option>
+                <option value="">Germany</option>
+                <option value="">Spain</option>
+                <option value="">Italy</option>
+                <option value="">Czech Republic</option>
+                <option value="">United States</option>
+                <option value="">United Kingdom</option>
+                <option value="">Netherland</option>
+                <option value="">China</option>
+                <option value="">Hong Kong</option>
+                <option value="">France</option>
+                <option value="">Brazil</option>
+                <option value="">Canada</option>
+                <option value="">Ireland</option>
+                <option value="">Japan</option>
+                <option value="">Australia</option>
+                <option value="">Sri Lanka</option>
+                <option value="">Pakistan</option>
+                <option value="">New Zealand</option>
+            </select>
+        </div>
+        </div>
+    </div>
+    <hr>
+    <div id="last">
+
+    </div>
+</body>
+</html>
+
+
+<script>
+    let arr = [
+    {
+       image:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAACFCAMAAABFatdeAAAAZlBMVEX39/cAAAD4+Pj////8/Pzs7Ow2Nja6urq9vb2Tk5NfX1/BwcE5OTliYmKKioqGhoZUVFQvLy9DQ0Pl5eXe3t6fn58aGhppaWmurq4gICDKysqnp6d/f38MDAxzc3MnJyfV1dVMTEwV6a4RAAAFHUlEQVR4nO1b2cKqIBA2GNrMLM0WbX3/lzx2ZJMlUKz/hrmrmPkGhmWYj5IkShQqyEOmV2UCOCFuAWywE6DKTUB9323mLilODVHNAK6vu41TilOVWD3Az2LmKxXAeFWzA7jxNtHKjsBo1cTkACyG2GitiG7Acpjq2jACqLwNMzKrMFMlAzWFqjSE96FGZoT2Aq5DNW+lOgCofAzGp71A5DhWVYo+C+G+WS4ccqJNs24GQk0/XxqXJlfdqfi4or8cMDgE46xrWnQBYKrHp4cqjfJcXQJ41f2wNqwMbarQsdpQ/C3tE7gU27FK6SgTK75rixaxmkf8iB/xI37Ej/gRP+JH/Igf8SN+xI/4EX8UfuaDn34P/+WBz6p9Sv3BS/Vsw6c/zJrEVUSBw552uAPkqpVblZVJN+pY8SLS7JWtHcLKXfeuiARPf9ULbXlS608o2cyGSt11AhH/2i+TVJsrfBS9pYDRqoapgpL1QCNPho9gN1C1NiwVGFjGlEqYQC7u9mbVngNDurHAo1XPRvg3/XF++Vk4Xgmoqp6T8HYtLfBtIHHybLb59qPk2yotsRpAhMlb1SUrg2rPDGAPMRIoAapRojCZgETtWxoEPgGJygxBZykB/znvx79uiqzS+Fe1F+n2vivm+02xu6/q1rCPC7gezb/K6Dhp1KNsfbazvgJ+PP8qox+MbOAtLx0eBPCvkpFkaztFj5XZY+b4eP5VGsJ6/0GheFpPniD+VYx97nTZFoMA/lWM/cmpcrXtB4J/rbxJ1KwXT0R68I/XtVmki+Za9HKjk+3xgcS/vo9J6cTsffr/gQIVcgAQZBJMlpJ30zfjislCXo6ZeQ7w+5/HRoH79z/6pQTfpjhSN9vtqJSGZmtcBQH3z+47sXkUtZbiAKTierEwjUAgPhxEhI3LHBMehIv2+CAYX7oB5JYlBpjHwDQFwvDFDehqT26B7zCG60cQPgK27ZletnA18qKtDJWCIHx+dFzKT1s8lGwAnvr1MwQfs44Zp7YEwjaZ+6T4vF+FI81ACY3TUVsCIfi8WwtXBcjeMgQfsZXlTDZRSQ+Du/b+Zjw+Ig/X2hMw1NWN/f3NYHy+9+lFFR2fbhSXw4T4tKZ3VG2aVJmv6hYUUv+kR0+h5kMG4U/l1AkYgk9Vdx5HN1+B5wnxadanvSkz4tMrRqM0nqD+vP4r/EHj/5h+/P94/v31+kMj9h/N11/vv5OePzT1PnqcP9RVrf7+o/OXZelaojJN/uEIAM8T9fe/0+RftsqyAjJx/iXyz4dn/qkn4GH5NxK8jl0dJeySYojTVPePu73C8L37h0ze2O5fEvz09y+Jg5up1ARtIKoTj4OhQQD/2ulX3IHiqQ0B4HrOf1eP3h5+MZx/pV/K9YeDUn84yLWRi6kMJvGvrlfsWOFfKYrM392ymgCtv0CZyuiz90N5PQAy/+oShX9lFvoc2DzLm2W6bPJMLwke9RkQwL9yB5A3CXc8aCEI4F95H5z1R15ivWlzACXZJ02D6FFEkH6sv9ap+KCFYBISFRP7f2FW7ZQUNW59DgTwr3IMzPX32fY/ZYHFCBhCMJ5/lbsBSaXwD7eM8w+4Ft/qDuDkeV59pl9bqerPXEJrpkzzN/2yfxMw27qUCCMpBDfDMpyGREVvO0DpJ6X5xzkwqVjoNykE2jOYn4jkwPKrA2B1gIfAkTB+zQG2DE0PQX7iQBcCPQ/+nQO7/Sb/k+nXCUD5kcT9vgyjxqNEifIV+QcfxWpqycD9SQAAAABJRU5ErkJggg==",
+       name:"All Categories"
+    },
+    {
+       image:"https://img.gkbcdn.com/s3/cim/category-177.jpg",
+       name:"Consumer Electronics"
+    },
+    {
+       image:"https://img.gkbcdn.com/s3/cim/category-1241.png",
+       name:"Sports & Outdoors"
+    },
+    {
+       image:"https://img.gkbcdn.com/s3/cim/category-971.jpg",
+       name:"Computer, Tablets & Accessories"
+    },
+    {
+       image:"https://img.gkbcdn.com/s3/cim/category-742.png",
+       name:"Toys & Hobbies"
+    },
+    {
+       image:"https://img.gkbcdn.com/s3/cim/category-174.png",
+       name:"Smart Home & Garden"
+    },
+    {
+       image:"https://img.gkbcdn.com/s3/cim/category-505.png",
+       name:"TV Boxes & Mini PC's"
+    },
+    {
+       image:"https://img.gkbcdn.com/s3/cim/category-1549.png",
+       name:"Wearable Watches"
+    },
+    {
+       image:"https://img.gkbcdn.com/s3/cim/category-215.png",
+       name:"Security Systems"
+    },
+    {
+       image:"https://img.gkbcdn.com/s3/cim/category-178.png",
+       name:"Phones & Accessories"
+    },
+    {
+       image:"https://img.gkbcdn.com/s3/cim/category-439.png",
+       name:"Automobiles & Motorcycles"
+    },
+    {
+       image:"https://img.gkbcdn.com/s3/cim/category-2060.png",
+       name:"Fashion"
+    }];
+
+  let arr2 = [
+{
+    image:"https://img.gkbcdn.com/p/2019-01-31/tronsmart-element-force-portable-bluetooth-speaker-1571993707403._w280_p1_.jpg",
+    name:"Tronsmart Force SoundPulse  40W Bluetooth 5.0 SpeakerIPX7 Water",
+    price:"₹4508.70",
+    offPrice:"₹6636.70"
+},
+{
+    image:"https://img.gkbcdn.com/p/2019-03-18/tronsmart-element-t6-plus-bluetooth-speaker-black-1574132869322._w280_p1_.jpg",
+    name:"Tronsmart Element T6 Plus Portable Bluetooth 5.0 Speaker with 40W Max",
+    price:"₹4428.17 ",
+    offPrice:"₹6441.34"
+},
+{
+    image:"https://img.gkbcdn.com/p/2017-07-26/xiaomi-wifi-amplifier-pro-black-1574132393616._w280_p1_.jpg",
+    name:"Xiomi Wifi Amplifier Pro 2X2 External Antenna 300Mbps Support 64 Devices",
+    price:"₹1577.52 ",
+    offPrice:"₹2173.42"
+},
+{
+    image:"https://img.gkbcdn.com/p/2020-03-18/Tronsmart-Onyx-Ace-Bluetooth-5-0-TWS-Earphones-White-899355-._w280_p1_.jpg",
+    name:"Tronsmart Onyx Ace Pro True Wireless Earbuds TWS Earphone , Qualcomm",
+    price:"₹ 2415.00",
+    offPrice:"₹3220.27"
+},
+{
+    image:"https://img.gkbcdn.com/p/2022-02-10/a6r-tws-wireless-earphones-black-4570b2-1644488631155._w280_p1_.jpg",
+    name:"A6R TWS Bluetooth V5.0 Button IPX4 Waterproof 3h Playtime Wireless",
+    price:"₹ 683.67",
+    offPrice:"₹1207.49"
+},
+{
+    image:"https://img.gkbcdn.com/p/2019-07-02/tronsmart-element-force-portable-bluetooth-speaker---carrying-case-1571993695019._w280_p1_.jpg",
+    name:"Bundie Tronsmart Force SoundPulse 40W Bluetooth 5.0 Speaker IPX7 Water",
+    price:"₹4750.28 ",
+    offPrice:"₹6110.23"
+},
+{
+    image:"https://img.gkbcdn.com/p/2019-09-23/e6s-bluetooth5-0-tws-earphones-power-display-1574132636939._w280_p1_.jpg",
+    name:"E6S Bluetooth 5.0 TWS Earphone Siri LED Power Display Binaural Call",
+    price:"₹689.31 ",
+    offPrice:"₹965.92"
+},
+{
+    image:"https://img.gkbcdn.com/p/2019-02-20/stmagic-spt31-512g-mini-portable-m-2-ssd-gray-1571995742585._w280_p1_.jpg",
+    name:"Beelink GT-King Amlogic S922X 202GHz Android 9.0 Dual System 4GB DDR4 ",
+    price:"₹ 3738.56",
+    offPrice:"₹4830.30"
+},
+{
+    image:"https://img.gkbcdn.com/p/2019-06-22/beelink-gt-king-amlogic-s922x-android-9-4gb-64gb-tv-box-1571994308879._w280_p1_.jpg",
+    name:"A95X F3 Air Amlogic S905x3 4GB/Phone Android 9.0 8K Video decode TV Bits ",
+    price:"₹10306.63",
+    offPrice:"₹12078.50"
+},
+{
+    image:"https://img.gkbcdn.com/p/2019-10-24/a95x-f3-air-amlogic-s905x3-android-9-0-8k-video-decode-tv-box-4gb-32gb-1574132894243._w280_p1_.jpg",
+    name:"A6R TWS Bluetooth V5.0 Button IPX4 Waterproof 3h Playtime Wireless",
+    price:"₹3738.21 ",
+    offPrice:"₹4830.33"
+},
+{
+    image:"https://img.gkbcdn.com/p/2019-10-07/xiaomi-air-2-bluetooth-5-0-tws-earphone--ir-sensor-lhdc-stereo-1574132283996._w280_p1_.jpg",
+    name:"A95X F3 Air Amlogic S905x3 4GB/Phone Android 9.0 8K Video decode TV Bits",
+    price:"₹ 6199.45",
+    offPrice:"₹8061.84"
+},
+{
+    image:"https://img.gkbcdn.com/p/2019-12-24/xiaomi-es3-so-white-3d-smart-floating-blade-head-razor-black-1577180518315._w280_p1_.jpg",
+    name:"E6S Bluetooth 5.0 TWS Earphone Siri LED Power Display Binaural Call",
+    price:"₹ 2334.67",
+    offPrice:"₹2817.55"
+},
+{
+    image:"https://img.gkbcdn.com/p/2019-10-28/enchen-blackstone-3d-smart-electric-shaver-black-1574132742777._w280_p1_.jpg",
+    name:"Tronsmart Force SoundPulse  40W Bluetooth 5.0 SpeakerIPX7 Water",
+    price:"₹ 1513.10",
+    offPrice:"₹3416.88"
+},
+{
+    image:"https://img.gkbcdn.com/p/2020-04-27/Tronsmart-Onyx-Ace-Bluetooth-5-0-TWS-Earphones-Blcak-902398-._w280_p1_.jpg",
+    name:"A6R TWS Bluetooth V5.0 Button IPX4 Waterproof 3h Playtime Wireless",
+    price:"₹ 2415.66",
+    offPrice:"₹3220.22"
+},
+{
+    image:"https://img.gkbcdn.com/p/2019-06-03/tronsmart-element-t6-plus-1571994626784._w280_p1_.jpg",
+    name:"A95X F3 Air Amlogic S905x3 4GB/Phone Android 9.0 8K Video decode TV Bits",
+    price:"₹4750.00 ",
+    offPrice:"₹6447.22"
+},
+{
+    image:"https://img.gkbcdn.com/p/2020-05-09/Razer-Viper-Mini-RGB-Gaming-Mouse-61G-Ultra-Light-Black-903961-._w280_p1_.jpg",
+    name:"E6S Bluetooth 5.0 TWS Earphone Siri LED Power Display Binaural Call",
+    price:"₹2978.22 ",
+    offPrice:"₹3220.00"
+},
+{
+    image:"https://img.gkbcdn.com/p/2022-02-09/gamebox-g5-32gb-video-game-console-with-2-gamepads-8fec60-1644387756223._w280_p1_.jpg",
+    name:"Tronsmart Force SoundPulse  40W Bluetooth 5.0 SpeakerIPX7 Water",
+    price:"₹4347.23 ",
+    offPrice:"₹5094.23"
+},
+{
+    image:"https://img.gkbcdn.com/p/2020-10-12/P301-ANC-Bluetooth-5-0-TWS-Earbuds-426451-0._w280_p1_.jpg",
+    name:"A6R TWS Bluetooth V5.0 Button IPX4 Waterproof 3h Playtime Wireless",
+    price:"₹ 2817.63",
+    offPrice:"₹3517.32"
+}, 
+{
+    image:"https://img.gkbcdn.com/p/2021-11-09/63in1-Screwdriver-Set-Gray-477863-0._w280_p1_.jpg",
+    name:"Xiomi Wifi Amplifier Pro 2X2 External Antenna 300Mbps Support 64 Devices",
+    price:"₹ 985.22",
+    offPrice:"₹1522.00"
+},
+{
+    image:"https://img.gkbcdn.com/p/2020-01-03/laserpecker-l1-mini-bluetooth-laser-engraver-machine-black-1578041124700._w280_p1_.jpg",
+    name:"E6S Bluetooth 5.0 TWS Earphone Siri LED Power Display Binaural Call",
+    price:"₹ 19003.22",
+    offPrice:"₹24526.36"
+},
+{
+    image:"https://img.gkbcdn.com/p/2018-11-22/netac-n600s-1tb-ssd-2-5-inch-solid-state-drive-blue-1571991121689._w280_p1_.jpg",
+    name:"Tronsmart Force SoundPulse  40W Bluetooth 5.0 SpeakerIPX7 Water",
+    price:"₹11192.33 ",
+    offPrice:"₹17002.33"
+},
+{
+    image:"https://img.gkbcdn.com/p/2022-01-24/Sculpfun-Y-axis-Laser-Rotary-Roller-494879-0._w280_p1_.jpg",
+    name:"A95X F3 Air Amlogic S905x3 4GB/Phone Android 9.0 8K Video decode TV Bits",
+    price:"₹ 7166.36",
+    offPrice:"₹8522.31"
+},
+{
+    image:"https://img.gkbcdn.com/p/2021-03-24/A95X-F4-Android-11-0-Amlogic-S905X4-4GB-32GB-TV-BOX-457383-0._w280_p1_.jpg",
+    name:"Xiomi Wifi Amplifier Pro 2X2 External Antenna 300Mbps Support 64 Devices",
+    price:"₹ 3998.66",
+    offPrice:"₹4699.38"
+},
+{
+    image:"https://img.gkbcdn.com/p/2020-01-07/Xiaomi-Mijia-LCD-Writing-Tablet-10-Inch-With-Pen-White-895504-._w280_p1_.jpg",
+    name:"A6R TWS Bluetooth V5.0 Button IPX4 Waterproof 3h Playtime Wireless",
+    price:"₹ 1799.85",
+    offPrice:"₹2200.36"
+},
+{
+    image:"https://img.gkbcdn.com/p/2021-01-14/MECOOL-KM6-Deluxe-4GB-64GB-Android-TV-10-0-TV-BOX-428277-0._w280_p1_.jpg",
+    name:"Tronsmart Force SoundPulse  40W Bluetooth 5.0 SpeakerIPX7 Water",
+    price:"₹ 7379.01",
+    offPrice:"₹8001.01"
+},
+{
+    image:"https://img.gkbcdn.com/p/2018-12-28/sg106-1080p-wifi-fpv-rc-drone-rtf-black-1574132216240._w280_p1_.jpg",
+    name:"A95X F3 Air Amlogic S905x3 4GB/Phone Android 9.0 8K Video decode TV Bits",
+    price:"₹ 3954.98",
+    offPrice:"₹4600.00"
+},            
+{
+    image:"https://img.gkbcdn.com/p/2020-03-27/Enchen-Hummingbird-Electric-Hair-Clipper-Black-900148-._w280_p1_.jpg",
+    name:"E6S Bluetooth 5.0 TWS Earphone Siri LED Power Display Binaural Call",
+    price:"₹2334.74 ",
+    offPrice:"₹2897.79"
+},
+{
+    image:"https://img.gkbcdn.com/p/2019-10-10/tanix-tx3-amlogic-s905x3-8k-video-decode-android-9-0-tv-box-4gb-32gb--1574132449670._w280_p1_.jpg",
+    name:"A6R TWS Bluetooth V5.0 Button IPX4 Waterproof 3h Playtime Wireless",
+    price:"₹ 4026.25",
+    offPrice:"₹4899.32"
+},
+{
+    image:"https://img.gkbcdn.com/p/2022-03-09/POWKIDDY-RGB10-Max2-Handheld-Game-Console-256GB-White-497439-0._w280_p1_.jpg",
+    name:"Tronsmart Force SoundPulse  40W Bluetooth 5.0 SpeakerIPX7 Water",
+    price:"₹ 13608.52",
+    offPrice:"₹15999.99"
+},
+{
+    image:"https://img.gkbcdn.com/p/2018-11-09/gamesir-vx-e-sports-aimswitch-wireless-keyboard-mouse-combo-black-1571992487153._w280_p1_.jpg",
+    name:"Xiomi Wifi Amplifier Pro 2X2 External Antenna 300Mbps Support 64 Devices",
+    price:"₹ 7222.22",
+    offPrice:"₹7892.35"
+},
+{
+    image:"https://img.gkbcdn.com/p/2019-02-28/xiaomi-wireless-car-charger-20w-power-blcak-1571991489443._w280_p1_.jpg",
+    name:"A95X F3 Air Amlogic S905x3 4GB/Phone Android 9.0 8K Video decode TV Bits",
+    price:"₹ 6444.00",
+    offPrice:"₹7200.36"
+},
+{
+    image:"https://img.gkbcdn.com/p/2018-04-13/logitech-c930e-1080p-hd-video-webcam-90-degree-extended-view-1571993532041._w280_p1_.jpg",
+    name:"A6R TWS Bluetooth V5.0 Button IPX4 Waterproof 3h Playtime Wireless",
+    price:"₹7266.58 ",
+    offPrice:"₹8000.99"
+},
+{
+    image:"https://img.gkbcdn.com/p/2022-03-21/ugoos-am6b-plus-amlogic-s922x-j-4gb-32gb-android-9-0-4k-tv-box--b8c872-1647842685849._w280_.png",
+    name:"E6S Bluetooth 5.0 TWS Earphone Siri LED Power Display Binaural Call",
+    price:"₹ 13822.27",
+    offPrice:"₹19700.22"
+},
+{
+    image:"https://img.gkbcdn.com/p/2017-10-28/ipega-pg-9078-wireless-bluetooth-gamepad-black-1571994388383._w280_p1_.jpg",
+    name:"Tronsmart Force SoundPulse  40W Bluetooth 5.0 SpeakerIPX7 Water",
+    price:"₹ 682.89",
+    offPrice:"₹900.28"
+},
+{
+    image:"https://img.gkbcdn.com/p/2017-10-28/ipega-pg-9078-wireless-bluetooth-gamepad-black-1571994388383._w280_p1_.jpg",
+    name:"E6S Bluetooth 5.0 TWS Earphone Siri LED Power Display Binaural Call",
+    price:"₹7899.25 ",
+    offPrice:"₹10000.99"
+},
+{
+    image:"https://img.gkbcdn.com/p/2021-11-29/razer-deathadder-essential-optical-gaming-mouse-white-fc2f21-1638169933794._w280_p1_.jpg",
+    name:"Xiomi Wifi Amplifier Pro 2X2 External Antenna 300Mbps Support 64 Devices",
+    price:"₹ 1788.99",
+    offPrice:"₹2235.11"
+},
+{
+    image:"https://img.gkbcdn.com/p/2022-03-04/Lenovo-Thinkplus-LP3-Wireless-Bluetooth-Earphone-Black-497326-0._w280_p1_.jpg",
+    name:"A6R TWS Bluetooth V5.0 Button IPX4 Waterproof 3h Playtime Wireless",
+    price:"₹ 8280.22",
+    offPrice:"₹9007.99"
+},
+{
+    image:"https://img.gkbcdn.com/p/2019-02-20/stmagic-spt31-1tb-mini-portable-m-2-ssd-gray-1571993797601._w280_p1_.jpg",
+    name:"Tronsmart Force SoundPulse  40W Bluetooth 5.0 SpeakerIPX7 Water",
+    price:"₹8988.25 ",
+    offPrice:"₹9999.99"
+},
+{
+    image:"https://img.gkbcdn.com/p/2020-09-16/PS3000-32GB-Gaming-Stick-3000--Games-426225-4._w280_p1_.jpg",
+    name:"A6R TWS Bluetooth V5.0 Button IPX4 Waterproof 3h Playtime Wireless",
+    price:"₹ 7822.00",
+    offPrice:"₹8599.25"
+},
+{
+    image:"https://img.gkbcdn.com/p/2021-10-27/qcy-ht03-tws-earbuds-1635323027167._w280_p1_.jpg",
+    name:"Xiomi Wifi Amplifier Pro 2X2 External Antenna 300Mbps Support 64 Devices",
+    price:"₹ 2568.32",
+    offPrice:"₹3289.89"
+},
+
+]
+
+arr.forEach(function(elem){
+   let avengers = document.createElement("div")
+   document.querySelector("#thor").append(avengers)
+
+    let images = document.createElement("img")
+    images.setAttribute("src" , elem.image);
+
+    let names = document.createElement("h5")
+    names.innerText=elem.name
+   avengers.append(images,names)
+})
+
+
+arr2.forEach(function(elem){
+   let avatar = document.createElement("div")
+   document.querySelector("#last").append(avatar)
+
+    let photo = document.createElement("img")
+    photo.setAttribute("src" , elem.image);
+
+    let naam = document.createElement("h3")
+    naam.innerText=elem.name
+
+    let prices = document.createElement("span")
+    prices.innerText=elem.price
+
+    let offPrices = document.createElement("strike")
+    offPrices.innerText=elem.offPrice
+
+    let buttons = document.createElement("button")
+    buttons.innerText="Add to Cart"
+
+   avatar.append(photo,naam,prices,offPrices,buttons)
+})
+</script>
