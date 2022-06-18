@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product.html</title>
+</head>
+<style>
+    #main{
+        width:100%;
+        height:500px;
+        display:flex;
+    }
+    #main>div:nth-child(1){
+        /* border:1px solid black; */
+        margin-top: 30px;
+    }
+    #main>div:nth-child(2){
+        /* border:1px solid red; */
+        margin-left: 20px;
+    }
+    button+button{
+        padding:15px;
+        background-color: blue;
+        color:white;
+        border:0px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    h1{
+        color: red;
+    }
+    h2+button{
+        background-color: white;
+        color: blue;
+        padding: 13px;
+        border-radius: 5px;
+        border:1px solid blue;
+        cursor: pointer;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    span{
+        font-weight: bold;
+        color: red;
+    }
+</style>
+<body>
+    <div id="main">
+        <div>
+            <img src="https://img.gkbcdn.com/p/2021-11-29/razer-deathadder-essential-optical-gaming-mouse-black-aa9d23-1638169302886._w280_p1_.jpg" alt="">
+        </div>
+        <div>
+            <h2>Razer DeathAdder Essential Optical Professional Grade Gaming Mouse Ergonomic 6400 Adjustable DPI (Nylon Wire) - Black</h2>
+            <img src="https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif" alt="">
+            <h1>Flash Deal</h1>
+            <h2>₹ 2415.00<br><span>FLAT 21% OFF</span></h2>
+            <button>ADD TO CART</button>
+            <button class="add">BUY NOW</button>
+        </div>
+    </div>
+</body>
+<script>
+    let res=document.querySelector('button')
+    res.addEventListener('click',myFunc)
+
+    function myFunc(){
+       alert('Product added successfully')
+    }
+
+    let buttons=document.querySelector('.add')
+    buttons.addEventListener('click',myPROD)
+
+    function myPROD(){
+        window.location.href='login.html'
+    }
+</script>
+</html>
