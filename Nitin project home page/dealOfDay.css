@@ -1,0 +1,21 @@
+h1{
+    color: red;
+    margin: auto;
+    text-align: center;
+    
+}
+#categories{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    gap: 20px;
+    width: 85%;
+    margin: auto;
+    border: 1px solid;
+    margin-top: 20px;
+}
+#categories img{
+    width: 100%;
+}
+#categories div{
+    border: 1px solid red;
+}
