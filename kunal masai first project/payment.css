@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#nav{
+  height: 120px;
+  background-color: #0c70fe;
+}
+#nav>img{
+    display: block;
+    width: 22%;
+    margin: auto;
+    padding-top: 20px;
+}
+form{
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+  padding: 5%;
+  
+}
+form>h1{
+    text-align: center;
+    background-color: #0c70fe;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+input,button,label{
+    display: block;
+  width: 100%;
+  margin: auto;
+  font-size: large;
+  padding: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+button{
+    background-color: #0c70fe;
+    color: white;
+    font-weight: bold;
+    
+
+}
+.two{
+    width: 40%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+@media all and (min-width: 601px) and (max-width: 900px){
+  #nav>img{
+    width: 30%;
+}
+form{
+  width: 80%;
+}
+.two{
+  width: 60%;
+  margin: auto;
+  
+}
+}
+@media all and (min-width: 320px) and (max-width: 600px){
+  #nav>img{
+    width: 50%;
+}
+form{
+  width: 100%;
+}
+.two{
+  width: 80%;
+  margin: auto;
+  
+}
+}

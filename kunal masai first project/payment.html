@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+</head>
+<link rel="stylesheet" href="payment.css">
+<body>
+    <div id="nav">
+        <img src="https://www.linkpicture.com/q/pic1_17.png" alt="image">
+    </div>
+    <div class="two">
+        <form >
+            <h1>Payment</h1>
+            <label for="ccn">Credit Card Number:</label>
+<input id="card-no" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+             <label> Expiry Date</label>
+            <input type="text" placeholder="Enter Month / year" id="month" >
+            <label> CVC Number</label>
+            <input type="password" placeholder="Enter CVC Number" maxlength="3" id="cvc">
+            <label> OTP Number</label>
+            <input type="number" placeholder="Enter OTP Number" id="otp">
+            <button>Pay</button>
+        </form>
+    </div>
+</body>
+<script>
+    document.querySelector('form').addEventListener('submit',userPay);
+    let payArr=JSON.parse(localStorage.getItem('cardData')) || [];
+    function userPay(){
+        event.preventDefault();
+        let obj={
+            Card: document.getElementById('card-no').value, 
+            Date: document.getElementById('month').value, 
+            Cvc: document.getElementById('cvc').value, 
+            Otp: document.getElementById('otp').value, 
+        };
+       
+        if(checkCard(obj.Card)===true){
+            payArr.push(obj);
+            localStorage.setItem('cardData',JSON.stringify(payArr));
+            alert('Payment Sucessful');
+        }
+        else{
+            alert('Something Is Wrong Try Again');
+
+        }
+    }
+
+    function checkCard(Card,Cvc){
+      let filtered=payArr.filter(function(elem){
+        return Card=== elem.Card;
+      })
+      if(filtered.length >0){
+        return false;
+      }
+      else {
+        return true;
+      }
+    }
+</script>
+</html>
