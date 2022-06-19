@@ -101,7 +101,7 @@
             font-size: 18px;
             margin-top: 25px;
             cursor: pointer;
-            font-family: 'Times New Roman', Times, serif;
+            
         }
         #navbarBox7>h6>a{
             color: white;
@@ -169,6 +169,7 @@
         #main{
             width: 80%;
             margin: auto;
+            border: 1px solid transparent;
         }
         
         .product>div{
@@ -187,25 +188,26 @@
         .product>div>div:hover{
             cursor: pointer;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            
         }
-        .product>div>div>img:nth-child(1){
+        .product>div>div>a>img:nth-child(1){
             width: 100%;
         }
-        .product>div>div>img:nth-child(2){
+        .product>div>div>a>img:nth-child(2){
             width: 33%;
             padding: 0px 3px;
         }
-        .product>div>div>img:nth-child(2)+p{
+        .product>div>div>a>img:nth-child(2)+p{
             display: inline;
         }
-        .product>div>div>img:nth-child(2)+p+p{
+        .product>div>div>a>img:nth-child(2)+p+p{
             color: #d94141;
             font-weight: bold;
         }
-        .product>div>div>img:nth-child(2)+p+p+s{
+        .product>div>div>a>img:nth-child(2)+p+p+s{
             color: #9ea2a5;
         }
-        .product>div>div>img:nth-child(2)+p+p+s+p{
+        .product>div>div>a>img:nth-child(2)+p+p+s+p{
             color: white;
             background-color: #d94141;
             font-size: 13px;
@@ -309,7 +311,7 @@
                   <div>
                     <div id="navbarBox7">
                         <img style="width: 70%;margin-top: 20px;margin-left: 15px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcujW47zt-z5EheJk4uquGtCawLIgiiZC-Sg&usqp=CAU" alt="">
-                       <h6> <a href="signup.html" target="_blank"> Sign  up</a></h6>
+                       <h6 style="font-size:16px"> <a href="signup.html" target="_blank"> Sign  up</a></h6>
                     </div>
                   </div>
                   <div>
@@ -617,10 +619,9 @@
             let e = document.createElement("s")
             let f = document.createElement("p")
             let g = document.createElement("img")
+            let h = document.createElement("a")
 
-            a.addEventListener("click", function(){
-                
-            })
+            h.setAttribute("href",el.productPage)
             b.setAttribute("src", el.photo);
             g.setAttribute("src", el.image);
             c.innerText = el.name
@@ -629,8 +630,8 @@
             f.innerText = el.discount
             f.innerText = el.discount
 
-
-            a.append(b,g,c,d,e,f)
+            h.append(b);
+            a.append(h,g,c,d,e,f)
 
             z.append(a);
         });

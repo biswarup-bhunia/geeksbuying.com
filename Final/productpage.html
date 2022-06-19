@@ -424,7 +424,7 @@
                     <option value="">United States</option>
                 </select>
                 <br>
-                <button id="addToCart"> <a href="cart.html">Add To Cart</a> </button>
+                <button id="addToCart" > <a href="cart.html">Add To Cart</a> </button>
                 <button><a href="Address_Page.html"> Buy Now</a></button>
                 <br>
                 
@@ -519,3 +519,21 @@
     </div>
 </body>
 </html>
+
+<script>
+    let productData = {
+        productImage:"https://img.gkbcdn.com/p/2017-10-18/razer-basilisk-wired-gaming-mouse-scroll-wheel-resistance-1571970390794._w500_p1_.jpg",
+        productName:"Razer Basilisk Wired Gaming Mouse Chroma Enabled RGB FPS 16000 DPI Customizable Scroll Wheel Resistance - Black",
+        gif:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        currencySymbol:"₹",
+        price:"4830.80",
+    }
+    let cartLS = JSON.parse(localStorage.getItem("cartData"))||[];
+   
+    let addToCart = document.getElementById("addToCart");
+    addToCart.addEventListener("click", function() {
+        alert("Product Add to Cart Successfully!");
+        cartLS.push(productData);
+        localStorage.setItem("cartData", JSON.stringify(cartLS));
+    });
+</script>
