@@ -12,14 +12,11 @@ body{
     background-color: white;
     
 }
-h1{
-    margin-top: 50px;
-}
 select{
     padding-top: 10px;
    
 }
-#box{
+#bottel{
     width: 90%;
     /* height: 400px; */
     /* border: 1px solid blue; */
@@ -45,7 +42,6 @@ select{
     /* grid-template-rows: repeat(9,auto); */
     grid-template-rows: repeat(auto,auto);
     gap: 10px;
-    margin-right: 5px;
 }
 .right>div{
     /* height: 350px; */

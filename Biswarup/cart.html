@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+  </head>
+  <link rel="stylesheet" href="css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #nav {
+      height: 100px;
+      background-color: #0c70fe;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #nav > img {
+      margin-left: 50px;
+      width: 14%;
+      padding-top: 20px;
+    }
+    .container {
+      color: white;
+      margin-left: 20px;
+      padding-top: 20px;
+      margin-bottom: 10px;
+      font-size: larger;
+    }
+    .pay{
+      width: 80%;
+      margin: auto;
+      border: 1px solid rgb(218, 218, 218);
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .pay>p{
+        display: inline-block;
+        font-size: 25px
+    }
+    .pay>a{
+      font-size: 20px;
+      text-decoration: none;
+    }
+    .pay>a>button{
+      font-size: 20px;
+      padding: 10px 20px 10px 20px;
+      background-color: #0c70fe;
+      color: white;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+    #item{
+      width: 90%;
+      margin: auto;
+      /* border: 2px solid red;
+      height: 300px; */
+    }
+  </style>
+  <body>
+    <div id="nav">
+      <img src="https://www.linkpicture.com/q/pic1_17.png" alt="image" />
+      <div class="container">
+        <img src="https://www.linkpicture.com/q/nav1.png" alt="image" />
+      </div>
+    </div>
+    <div id="item">
+        <!-- all item add here -->
+    </div>
+    <div class="pay">
+        <a href="index.html">continue shopping > </a>
+        <p>Total:- ₹ 0.00</p>
+        <a href="Address_Page.html"><button>Proceed To Checkout</button></a>
+    </div>
+  </body>
+</html>
