@@ -173,7 +173,7 @@
         width:50%;
         height:100%;
         /* border:1px solid red; */
-        text-align: center;
+      
        
     }
     #middle>div:nth-child(1):hover{
@@ -222,7 +222,10 @@
        color:black;
        
     }
-  
+   h3{
+    text-align: center;
+    padding-top: 18px;
+   }
 
 </style>
 <body>
@@ -319,7 +322,7 @@
 
     <div id="floor">
         <div>
-          <img src='https://img.gkbcdn.com/p/2021-11-29/razer-deathadder-essential-optical-gaming-mouse-black-aa9d23-1638169302886._w280_p1_.jpg'/>
+          <img id="aryan" src='https://img.gkbcdn.com/p/2021-11-29/razer-deathadder-essential-optical-gaming-mouse-black-aa9d23-1638169302886._w280_p1_.jpg'/>
             <img src='https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif'/><span >Razer DeathAdder Essential Optical Professional</span>
             <h2>₹4025.53</h2>
         </div>
@@ -570,10 +573,10 @@
 
 </html>
 <script>
-    let image=document.querySelector('img');
+    let image=document.getElementById('aryan');
     image.addEventListener('click',myDeal)
 
     function myDeal(){
-    window.location.href='products.html'
+     window.location.href='productpage.html'
     }
 </script>
