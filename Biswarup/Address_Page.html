@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - Geekbuying.com</title>
     <style>
+        #nav {
+        height: 100px;
+        background-color: #0c70fe;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #nav > img {
+        margin-left: 50px;
+        width: 14%;
+        padding-top: 20px;
+
+      }
+      #nav > img+div>img{
+        width: 40%;
+        margin-left: 824px;
+      }
+      
+    </style>
+    
+
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -14,6 +36,10 @@
          body{
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             color: #333333;
+            background: url("https://www.linkpicture.com/q/address-icon-1757_1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
             
         }
         #container{
@@ -132,6 +158,13 @@
     </style>
 </head>
 <body>
+    <div id="nav">
+        <img src="https://www.linkpicture.com/q/pic1_17.png" alt="image" />
+        <div>
+          <img src="https://www.linkpicture.com/q/Screenshot-2022-06-19-100648.png" alt="image" />
+        </div>
+      </div>
+
     <div id="container">
         <span class="place_title">Shipping Address</span>
         <div class="checkout_address">
@@ -204,13 +237,13 @@
                 <input type="number" placeholder="Your Zip/Postal Code" id="zip">
                 <br>
                 <p><span>*</span>Address line1:</p>
-                <input type="text" name="" id="" placeholder="Steet address,company name,P.O box, c/o, etc">
+                <input type="text" name="" id="addressLine1" placeholder="Steet address,company name,P.O box, c/o, etc">
                 <br>
                 <p>Address line2:</p>
-                <input type="text" name="" id="" placeholder="Apartment, sutie, unit, building, floor, etc (Optional)">
+                <input type="text" name="" id="addressLine2" placeholder="Apartment, sutie, unit, building, floor, etc (Optional)">
                 <br>
                 <p><span>*</span>Phone number:</p>
-                <input type="text" name="" id="" placeholder="Your phone number">
+                <input type="number" name="" id="phone" placeholder="Your phone number">
                 <br>
                 <input type="submit" value="Save & Place an Order"name="" id="">
 
@@ -222,3 +255,26 @@
     </div>
 </body>
 </html>
+<script>
+    addressDataLS = JSON.parse(localStorage.getItem('addressData'))||[];
+    let form = document.querySelector('form');
+    form.addEventListener('submit', addressData);
+    function addressData(event) {
+        event.preventDefault();
+        address = {
+            firstName : document.getElementById('fname').value,
+            lastName : document.getElementById('lname').value,
+            country : document.getElementById('countryName').value,
+            state : document.getElementById('stateName').value,
+            city : document.getElementById('cityName').value,
+            pincode : document.getElementById("zip").value,
+            address1 : document.getElementById('addressLine1').value,
+            address2 : document.getElementById('addressLine2').value,
+            phone : document.getElementById('phone').value,
+
+        };
+        addressDataLS.push(address);
+        localStorage.setItem('addressData', JSON.stringify(addressDataLS));
+
+    }
+</script>
