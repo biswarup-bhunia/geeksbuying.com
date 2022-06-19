@@ -148,31 +148,7 @@
 
 <style>
   
-    .creative{
-        width:85%;
-        position: relative;
-        margin: auto;
-    }
-    .creative>img{
-        width:100%;
-    }
-    .creative>button{
-        position: absolute;
-        top:40%;
-        background-color: rgba(180, 172, 172, 0.8);
-        border-radius: 100%;
-        font-size: 15px;
-        color: white;
-        width:50px;
-        height:50px;
-        border: 0px;
-    }
-    .creative>button:nth-child(2){
-        left:2%;
-    }
-    .creative>button:nth-child(3){
-        right:2%;
-    }
+   
     #main{
         display:grid;
         width:85%;
@@ -284,12 +260,7 @@
 
     
     <div>
-        <div class="creative">
-            <img src="https://img.gkbcdn.com/s3/bn/2205/1500x400-629459b62b40c91bd09df69f.jpg" alt="">
-            <button><</button>
-            <button>></button>
-    
-        </div>
+      
         <div id="main">
             <div class="box">
                 <div>
@@ -530,37 +501,7 @@
 </html>
 
 <script>
-    let img=document.querySelector('img');
-
-    let buttons=document.querySelectorAll('button');
-
-    let imgNum=0;
-    let imgArr=[
-        "https://img.gkbcdn.com/s3/bn/2205/1500x400-629459b62b40c91bd09df69f.jpg",
-    'https://img.gkbcdn.com/s3/bn/2205/1500x400-62945a9b2b40c91bd09df6a1.jpg',
-    'https://img.gkbcdn.com/s3/bn/2205/1500x400-627b93f82b40c91518883249.jpg' ]
-
-    buttons[0].addEventListener('click',function(){
-        if(imgNum===0){
-
-            imgNum=imgArr.length-1;
-        }
-        else{
-              imgNum--;
-        }
-        img.src=imgArr[imgNum];
-    })
-
-    buttons[1].addEventListener('click',function(){
-        if(imgNum===imgArr.length-1){
-
-            imgNum=0;
-        }
-        else{
-              imgNum++;
-        }
-        img.src=imgArr[imgNum];
-    })
+   
 
     let but=document.querySelector('.ride')
     but.addEventListener('click',MyFUNC)
