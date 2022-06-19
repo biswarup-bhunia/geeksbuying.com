@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeekBuying Clearance Sales Product</title>
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        
+        #navbar{
+            width: 100%;
+            height: 170px;
+            border: 1px solid transparent;
+            position: sticky;
+            top: 0;
+        }
+        .navbarBox{
+            width: 100%;
+            height: 40px;
+            border: 1px solid transparent;
+            display: flex;
+            justify-content: end;
+            background-color: #2a89fc ;
+        }
+        .navbarBox select{
+            margin-left: 25px;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        .navbarBox>div{
+            background-color:#2a89fc ;
+            border-color: #2a89fc;
+        }
+        .navbarBox1{
+            width: 100%;
+            height: 85px;
+            border: 1px solid transparent;
+            display: grid;
+            grid-template-columns: 400px 730px 450px;
+            grid-template-rows: auto;
+            background-color: #1477fe;
+        }
+        .navbarBox1>div{
+            border: 1px solid transparent;
+        }
+        .navbarBox1>div:first-child{
+            background-color:#1477fe;
+        }
+        .navbarBox1>div:nth-child(2){
+            background-color: white;
+            width: 680px;
+            height: 50px;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+        .style{
+            width:58%;
+            margin-left: 60px;
+           
+        }
+        #navbarBox3{
+            display: flex;
+            justify-content: center;
+            align-items:center ;
+        }
+        #navbarBox3>div:nth-child(3){
+            width: 8%;
+            height: 50px;
+            border: 1px solid transparent;
+        }
+        #navbarBox3>div>img{
+            width: 90%;
+            margin-top: 4px;
+            margin-left: 2px;
+        }
+        #navbarBox4{
+            margin-left: 50px;
+            border: 1px solid transparent;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+        #navbarBox4>div{
+            border: 1px solid transparent;
+        }
+        #navbarBox5>div{
+            border: 1px solid transparent;
+        }
+        #navbarBox6{
+            display: flex;
+            height: 30px;
+        }
+        #navbarBox7{
+            display: grid;
+            grid-template-columns:50% 50%;
+            
+        }
+        #navbarBox7>h6{
+            color: white;
+            font-size: 18px;
+            margin-top: 25px;
+            cursor: pointer;
+            
+        }
+        #navbarBox7>h6>a{
+            color: white;
+        }
+        #navbarBox7>h6>a:link{
+            text-decoration: none;
+        }
+        #navbarBox7>h6>a:hover{
+            color: rgb(122, 193, 204);
+        }
+        .school{
+            border: 1px solid transparent;
+            width: 100%;
+            height: 41px;
+            display: grid;
+            grid-template-columns: repeat(9,120px);
+            background-color: #1477fe;
+            
+            
+
+        }
+        .school>div{
+            border: 1px solid transparent;
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+        }
+        .school>div>a{
+            color: white;
+        }
+        .school>div>a:hover{
+            color: red;
+        }
+        .school>div>a:link{
+            text-decoration: none;
+        }
+        
+        .school>div:first-child{
+            display: flex;
+        }
+        
+       
+    </style>
+
+
+    <style>
+       *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #333333;
+        }
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #333333;
+            background-color:#f2f2f2;
+        }
+        h1{
+            text-align: center;
+            font-size: 30px;
+            background-color: white;
+            padding: 50px;
+        }
+        #main{
+            width: 80%;
+            margin: auto;
+            border: 1px solid transparent;
+        }
+        
+        .product>div{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(4);
+            gap: 20px;
+            margin: 30px auto;
+            
+            border: 1px solid transparent;
+        }
+        .product>div>div{
+            background-color: white;
+            padding: 0px 10px;
+        }
+        .product>div>div:hover{
+            cursor: pointer;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            
+        }
+        .product>div>div>a>img:nth-child(1){
+            width: 100%;
+        }
+        .product>div>div>a>img:nth-child(2){
+            width: 33%;
+            padding: 0px 3px;
+        }
+        .product>div>div>a>img:nth-child(2)+p{
+            display: inline;
+        }
+        .product>div>div>a>img:nth-child(2)+p+p{
+            color: #d94141;
+            font-weight: bold;
+        }
+        .product>div>div>a>img:nth-child(2)+p+p+s{
+            color: #9ea2a5;
+        }
+        .product>div>div>a>img:nth-child(2)+p+p+s+p{
+            color: white;
+            background-color: #d94141;
+            font-size: 13px;
+            width: 70px;
+            padding: 3px 5px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        #spcialDeals{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            line-height: 100px;  
+            padding-bottom: 40px; 
+        }
+    #spcialDeals>span{
+    font-size: 28px;  
+    width: 100%;
+    margin: -20px;
+    text-align: center;
+    color: #333;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 148px;
+    display: inline-block
+    }
+    #spcialDeals>ul{
+        width: 1010px;
+    line-height: 50px;
+    margin: 0 auto;
+    letter-spacing: -3px;
+    border: 1px solid #dcdcdc;
+    
+    }
+    
+    #spcialDeals>ul>li{
+        width: 16%;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: top;
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: 0;
+    margin-left: -3px;
+    }
+    
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div class="navbarBox">
+            <div>
+                <select  style="background-color: #2a89fc;color:white; border-color: #2a89fc; " name="" id="">
+                    <option value="">Save BIG with our app!</option>
+                </select>
+            </div>
+            <div>
+                <select style="background-color: #2a89fc;color:white;  border-color: #2a89fc;" name="" id="hover1">
+                    <option value="">Language</option>
+                    <option value="">English</option>
+                    <option value="">Hindi</option>
+                    <option value="">Marathi</option>
+                    <option value="">Tamil</option>
+                    <option value="">Japnese</option>
+                    <option value="">Chinese</option>
+                </select>
+            </div>
+            <div>
+                <select  style="background-color: #2a89fc;color:white;margin-right: 25px; border-color: #2a89fc; "name="" id="">
+                    <option value="">Support Center</option>
+                </select>
+            </div>
+        </div>
+        <div class="navbarBox1">
+            <div>
+               <a href="index.html"> <img class="style"  src="https://i.ibb.co/mT6YcPD/Screenshot-110-01.jpg" alt=""></a>
+            </div>
+            <div id="navbarBox3">
+                <div>
+                <select style="font-size: 20px ;border:none ;margin-left: 10px;" name="" id="">
+                    <option value="">All Categories</option>
+                   
+                </select>
+            </div>
+            <div>
+                <input style="padding:10px 285px 10px 10px;margin-left: 5px;" type="button" value="Search by Keywords............">
+            </div>
+            <div >
+                <img src="https://media.istockphoto.com/photos/magnifier-glass-picture-id519752711?b=1&k=20&m=519752711&s=170667a&w=0&h=HalwVk67OygzmYD6Uh8qhwCUWEot8bXDHKYLKs9Dsnc=" alt="">   
+            </div>
+            </div>
+            <div id="navbarBox4">
+                  <div id="navbarBox5">
+                    <div style="margin-top: 10px;margin-left:30px;width:40%;color: white;font-size: 16px;">Ship to</div>
+                    <div id="navbarBox6"><img style="width:26%;margin-left: 30px;" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png" alt=""> 
+                    <h6 style="margin-top:4px ;font-size: 20px;color:white ;margin-left: 5px;font-weight: lighter;">/ INR</h6>
+                    </div>
+                  </div>
+                  <div>
+                    <div id="navbarBox7">
+                        <img style="width: 70%;margin-top: 20px;margin-left: 15px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcujW47zt-z5EheJk4uquGtCawLIgiiZC-Sg&usqp=CAU" alt="">
+                       <h6 style="font-size:16px"> <a href="signup.html" target="_blank"> Sign  up</a></h6>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="cart.html"><img style="width: 30%;margin-top: 17px;margin-left: 10px;" src="https://www.linkpicture.com/q/WhatsApp-Image-2022-06-19-at-3.08.22-AM.jpeg" alt=""></a>
+                    
+                  </div>
+            </div>
+        </div>
+     <div class="school">
+        <div style="margin-left: 25px;">
+            <span> <img style="width: 80%;margin-top: 1px;margin-left: 5px;" src="https://i.stack.imgur.com/QuyFJ.png" alt=""></span>
+            <span style="margin-right: -12px;color: white;font-size: 15px; cursor: pointer;">
+                Categories</span>
+        </div>
+        <div> <a href="NewForYouandInjoyLife.html">New</a> </div> 
+        <div> <a href="Bestselling.html">Bestselling</a> </div> 
+        <div> <a href="brand.html">Brand</a> </div>
+        <div> <a href="Clearance.html">Clearance</a> </div>
+        <div> <a href="Deals.html">Deals</a> </div> 
+        <div> <a href="coupon.html">Coupon</a> </div> 
+        <div> <a href="apponly.html">App Only</a> </div>
+     </div>
+    </div>
+
+        <div>
+            <h1>Eleglide</h1>
+        </div>
+        <div id="main">
+            <div class="product">
+                <div id="topContent"></div>
+            </div>
+            <div id="spcialDeals">
+                <span>Special Deals</span>
+                <ul>
+                    <li>All</li>
+                    <li>Under $10.00</li>
+                    <li>$10.00 - $19.99</li>
+                    <li>$20.00 - $49.99</li>
+                    <li>$50.00 - $100.00</li>
+                    <li>Above $100.00</li>
+                </ul>
+                  
+            </div>
+            <div class="product">
+                <div id="buttomContent"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="first-footer">
+                <h4>Why buy from geekbuying?</h4>
+            </div>
+            <hr>
+           <div id="second-footer">
+            <input type="search" name="A 5% Off" placeholder="Enter Email To Get A 5% Off" id="sech" >
+            <input type="button" value="Subscribe" placeholder="Subscribe">
+           </div>
+           <hr>
+           <div id="third-footer">
+            <div class="one">
+                <ul>
+                    <li><h4>Help</h4></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Warrenty </a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+                <ul>
+                    <li><h4>Support</h4></li>
+                    <li><a href="#">Payment Info</a></li>
+                    <li><a href="#">Shipping Guide</a></li>
+                    <li><a href="#">Wholesale</a></li>
+                    <li><a href="#">Drop Shipping</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Affilites</a></li>
+                </ul>
+                <ul>
+                    <li><h4>Policies</h4></li>
+                    <li><a href="#">Tearms & Condition</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Privicy</a></li>
+                    <li><a href="#">Declaration</a></li>
+                    <li><a href="#">Costoms</a></li>
+                </ul>
+            </div>
+            <div class="two">
+                <p>Download The App</p>
+                <div class="four">
+                    <div class="qr">
+                        <img src="data:image/png;base64,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" alt="QR">
+                    </div>
+                    <div class="app">
+                        <img src="https://thumbs.dreamstime.com/b/antalya-turkey-october-download-app-store-get-google-play-explore-huawei-appgallery-button-icons-antalya-turkey-231454507.jpg" alt="logo">
+                    </div>
+                </div>
+               
+                <p>Connect with us</p>
+            </div>
+            <div class="three">
+                <a href="#">service_payment@geeksbuys.com</a><br>
+                <a href="#">Ticket</a><br>
+                <a href="#">Live Chat</a>
+            </div>
+           </div>
+            <div id="forth-footer">
+                <h3>Popular Searches</h3>
+                <div class="five">
+                  <a href="#">Geekbuying Coupon</a>
+                  <a href="#">Roborock Q7 Max</a>
+                  <a href="#">Tronsmart Bluetooth Speakers</a>
+                  <a href="#">Windows Mini PC</a>
+                  <a href="#">ENGWE X26</a>
+                  <a href="#">android tv boxes</a>
+                  <a href="#">KugooKirin G2 Pro</a>
+                  <a href="#">LDS Robot Vacuum</a>
+                  <a href="#">Electric Bike</a>
+                  <a href="#">OnexPlayer mini AMD</a>
+                </div>
+                <div class="six">
+                   <p>English | Español | Français | Deutsch | ltaliano | Portugues | Nederlands | Polski | Pyccxn | Türkçe | eMrviká</p>
+                </div>
+            </div>
+            <hr>
+            <div id="fifth-footer">
+                <img src="https://www.linkpicture.com/q/pic1_18.png" alt="image">
+            </div>
+            <hr>
+            <div id="sixth-footer">
+                <p>Copyright © 2012-2022 GeekBuying.com. All rights reserved.</p>
+            </div>
+        </div>
+         
+</body>
+</html>
+<script>
+    // Top content Data
+    let topData=[
+        {photo:"https://img.gkbcdn.com/p/2022-04-24/eleglide-m1-plus-upgraded-version-electric-bike-12-5ah-250w-black-258649-1650765309927._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"ELEGLIDE M1 PLUS Electric Mountain Bike Upgraded" ,
+
+        price:"₹4830.80",
+        strickthrougnprice:"₹6682.92",
+        discount:"28% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2022-04-24/eleglide-m1-upgraded-version-electric-bike-7-5ah-250w-motor-dark-blue-b23cd2-1650765670228._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"ELEGLIDE M1 Electric Bike Upgraded Version 27.5 inch " ,
+
+        price:"₹1931.84",
+        strickthrougnprice:"₹2737.11",
+        discount:"29% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2021-09-10/eleglide-s1-plus-folding-electric-scooter-10--pneumatic-tires-black-1631275759377._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Eleglide S1 Plus Folding Electric Scooter 10" ,
+
+        price:"₹10467.68",
+        strickthrougnprice:"₹13688.75",
+        discount:"24% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2022-05-11/ELEGLIDE-T1-STEP-THRU-Electric-Bike-36V-12-5AH-250W-MTB-Bike-500405-0._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"ELEGLIDE T1 STEP-THRU Electric Trekking Bike Trekking" ,
+
+        price:"₹7246.61",
+        strickthrougnprice:"₹10682.92",
+        discount:"24% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2022-05-11/ELEGLIDE-T1-Electric-Bike-36V-12-5AH-250W-MTB-Bike-500404-0._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"ELEGLIDE T1 Electric Trekking Bike Trekking E-Bike" ,
+
+        price:"₹4991.86",
+        strickthrougnprice:"₹8682.92",
+        discount:"22% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2021-01-09/Xiaomi-AIoT-AX6000-Wireless-Dual-Band-Router-Black-427155-0._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Xiaomi AIoT Router AX6000 WiFi 6 Enhanced" ,
+
+        price:"₹13688.75",
+        strickthrougnprice:"₹23351.97",
+        discount:"41% OFF",
+        productPage : "productpage.html"
+    },
+     
+    {photo:"https://img.gkbcdn.com/p/2020-05-09/HandFan-Portable-Handheld-Spray-Fan-Black-903960-._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Portable Multi-function Handheld Folding Fan Cool" ,
+
+        price:"₹1770.78",
+        strickthrougnprice:"₹6682.92",
+        discount:"68% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2019-10-10/xiaomi-ninebot-max-g30-electric-scooter-350w-motor-max-30km-h-black-1574132374489._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Ninebot KickScooter MAX G30 G30P Portable " ,
+
+        price:"₹56367.95",
+        strickthrougnprice:"₹69252.24",
+        discount:"19% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2018-03-05/philips-led-barrel-lamp-100mm-hole-5w-4000k-white-1571986853755._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Philips LED Barrel Lamp 100mm Hole 5W 4000K - White" ,
+
+        price:"₹667.57",
+        strickthrougnprice:"₹723.94",
+        discount:"8% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2020-05-09/HandFan-Portable-Handheld-Spray-Fan-Black-903960-._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Roborock S5 Max Robot Vacuum Cleaner Virtual" ,
+
+        price:"₹28183.57",
+        strickthrougnprice:"₹44288.93",
+        discount:"36% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2016-10-22/original-elephone-blitz-qc3-0-power-adapter-eu-plug---white-1571994891649._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Original Elephone Blitz EU Plug Power Adapter Qualcomm Certification 3.0 Quick Charge Wall Charger - White" ,
+
+        price:"₹1046.04",
+        strickthrougnprice:"₹18682.92",
+        discount:"22% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2019-11-12/jbl-charge-4-bluetooth-hd-stereo-speaker-grey-1574132807704._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"JBL Charge 4 Bluetooth HD Stereo Speaker IPX7 Type-C 20 Hours Playtime - Grey" ,
+
+        price:"₹13688.75",
+        strickthrougnprice:"₹19351.97",
+        discount:"28% OFF",
+        productPage : "productpage.html"
+    },
+  
+    {photo:"https://img.gkbcdn.com/p/2016-04-13/vk-104a-hdmi-1-4-splitter-1x4-4k-2k-hd-1080p-3d-video-converter-adapter-uk---white-1572248809877._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"JVK-104A HDMI 1.4 Splitter 1x4 4K*2K HD 1080P 3D Video" ,
+
+        price:"₹1770.78",
+        strickthrougnprice:"₹2737.11",
+        discount:"35% OFF",
+        productPage : "productpage.html"
+    },  
+    {photo:"https://img.gkbcdn.com/p/2020-04-09/100pcs-intco-disposable-pvc-protection-gloves-size-m-transparent-1586399161671._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"100pcs INTCO Disposable PVC Virus Protection Gloves Ultra-" ,
+
+        price:"₹1851.3",
+        strickthrougnprice:"₹2737.11",
+        discount:"35% OFF",
+        productPage : "productpage.html"
+    },  
+    {photo:"https://img.gkbcdn.com/p/2018-07-21/geekbes-free-cube-power-strip-white-1571971583971._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Geekbes Free Cube USB Power Socket Power Strip" ,
+
+        price:"₹2898.16",
+        strickthrougnprice:"₹4267.12",
+        discount:"32% OFF",
+        productPage : "productpage.html"
+    },  
+    {photo:"https://img.gkbcdn.com/p/2020-03-18/xiaoda-sterilization-desk-lamp-white-1584494617822._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Xiaoda Sterilization Desk Lamp Portable USB Charging UV +" ,
+
+        price:"₹1931.84",
+        strickthrougnprice:"₹2253.95",
+        discount:"14% OFF",
+        productPage : "productpage.html"
+    },
+    ]
+   
+    //mapping the top data
+    let tc = document.querySelector("#topContent")
+    function mapData(x,z){
+        x.map(function(el){
+            let a = document.createElement("div")
+            let b = document.createElement("img")
+            let c = document.createElement("p")
+            let d = document.createElement("p")
+            let e = document.createElement("s")
+            let f = document.createElement("p")
+            let g = document.createElement("img")
+            let h = document.createElement("a")
+
+            h.setAttribute("href",el.productPage)
+            b.setAttribute("src", el.photo);
+            g.setAttribute("src", el.image);
+            c.innerText = el.name
+            d.innerText = el.price
+            e.innerText = el.strickthrougnprice
+            f.innerText = el.discount
+            f.innerText = el.discount
+
+            h.append(b);
+            a.append(h,g,c,d,e,f)
+
+            z.append(a);
+        });
+    }
+
+    mapData(topData,tc);
+
+    // Buttom Content Data
+    let buttomData = [
+    {photo:"https://img.gkbcdn.com/p/2021-03-09/JIMMY-H8-Cordless-Handheld-Flexible-Vacuum-Cleaner-Blue-455909-0._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"JIMMY H8 Lightweight Smart Handheld" ,
+
+        price:"₹16909.82",
+        strickthrougnprice:"₹20820.20",
+        discount:"19% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2020-11-18/xiaomi-jimmy-jv85-pro-cordless-handheld-vacuum-cleaner---purple-1605682136063._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"JIMMY JV85 Pro Cordless Handheld Flexible" ,
+
+        price:"₹25767.77",
+        strickthrougnprice:"₹40262.59",
+        discount:"36% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2020-09-18/JIMMY-JV85-Cordless-Handheld-Vacuum-Cleaner-23000Pa-Suction-426268-0._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"JIMMY JV85 Smart Cordless Handheld Vacuum" ,
+
+        price:"₹16104.55",
+        strickthrougnprice:"₹24157.23",
+        discount:"34% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2020-07-21/walkingpad-treadmill-r1-smart-folding-walking-and-running-machine-1595324388511._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"5pcs Xiaomi Mijia Aqara Body Sensor ZigBee WiFi Wireless" ,
+
+        price:"₹7246.61",
+        strickthrougnprice:"₹10682.92",
+        discount:"24% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2020-05-13/Kingston-A400-SSD-960GB-SATA-3-2-5-Inch-Solid-State-Drive-Dark-Gray-904095-._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Kingston A400 SSD 960GB SATA 3 2.5 Inch Solid State" ,
+
+        price:"₹4991.86",
+        strickthrougnprice:"₹8682.92",
+        discount:"22% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2020-04-21/Logitech-BCC950-Full-HD-1080P-Business-Webcam-Black-902465-._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Logitech BCC950 Full HD 1080P Business" ,
+
+        price:"₹13688.75",
+        strickthrougnprice:"₹23351.97",
+        discount:"41% OFF",
+        productPage : "productpage.html"
+    },
+     
+    {photo:"https://img.gkbcdn.com/p/2020-04-16/GameSir-VX2-AimSwitch-Mechanical-Keyboard-Mouse-Converter-Set-Black-902033-._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"ALLDOCUBE iPlay 20 Pro 4G LTE Tablet PC UNISOC" ,
+
+        price:"₹12770.78",
+        strickthrougnprice:"₹16682.92",
+        discount:"18% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2020-04-13/laserpecker-pro-smart-laser-engraver-grey-1586759146702._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"LaserPecker Pro Deluxe Smart Laser Engraver" ,
+
+        price:"₹56367.95",
+        strickthrougnprice:"₹69252.24",
+        discount:"19% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2020-04-09/ALLDOCUBE-X-NEO-4G-LTE-Tablet-PC-Snapdragon-660AIE-4GB-64GB-Silver-901406-._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"ALLDOCUBE X NEO 4G LTE Tablet PC Qualcomm" ,
+
+        price:"₹60667.57",
+        strickthrougnprice:"₹70723.94",
+        discount:"8% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2020-01-03/Lekong-Lithium-Battery-High-Pressure-Cleaning-Gun-Blue---Black-894897-._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Lekong Lithium Battery High-Pressure Cleaning Gun" ,
+
+        price:"₹28183.57",
+        strickthrougnprice:"₹44288.93",
+        discount:"36% OFF",
+        productPage : "productpage.html"
+    },
+    {photo:"https://img.gkbcdn.com/p/2020-04-09/100pcs-intco-disposable-pvc-protection-gloves-size-m-transparent-1586399161671._w280_p1_.jpg",
+            image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+            name:"100pcs INTCO Disposable PVC Virus Protection Gloves Ultra-" ,
+
+            price:"₹1851.3",
+            strickthrougnprice:"₹2737.11",
+            discount:"35% OFF",
+            productPage : "productpage.html"
+        },  
+    {photo:"https://img.gkbcdn.com/p/2019-11-12/jbl-charge-4-bluetooth-hd-stereo-speaker-grey-1574132807704._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"JBL Charge 4 Bluetooth HD Stereo Speaker IPX7 Type-C 20" ,
+
+        price:"₹1046.04",
+        strickthrougnprice:"₹18682.92",
+        discount:"22% OFF",
+        productPage : "productpage.html"
+    },
+
+    {photo:"https://img.gkbcdn.com/p/2019-05-07/xiaomi-jimmy-jv83-wireless-vacuum-cleaner-blue-1571994426496._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Xiaomi JIMMY JV83 Cordless Stick Vacuum Cleaner" ,
+
+        price:"₹13688.75",
+        strickthrougnprice:"₹19351.97",
+        discount:"28% OFF",
+        productPage : "productpage.html"
+    },
+    {photo:"https://img.gkbcdn.com/p/2020-03-18/xiaoda-sterilization-desk-lamp-white-1584494617822._w280_p1_.jpg",
+            image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+            name:"Xiaoda Sterilization Desk Lamp Portable USB Charging UV +" ,
+
+            price:"₹1931.84",
+            strickthrougnprice:"₹2253.95",
+            discount:"14% OFF",
+            productPage : "productpage.html"
+        },
+    {photo:"https://img.gkbcdn.com/p/2019-06-22/beelink-gt-king-amlogic-s922x-android-9-4gb-64gb-tv-box-1571994308879._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Beelink GT-King Amlogic S922X 2.2GHz Android" ,
+
+        price:"₹1770.78",
+        strickthrougnprice:"₹2737.11",
+        discount:"35% OFF",
+        productPage : "productpage.html"
+    },  
+    
+    {photo:"https://img.gkbcdn.com/p/2018-07-21/geekbes-free-cube-power-strip-white-1571971583971._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Geekbes Free Cube USB Power Socket Power Strip" ,
+
+        price:"₹2898.16",
+        strickthrougnprice:"₹4267.12",
+        discount:"32% OFF",
+        productPage : "productpage.html"
+    },  
+    {photo:"https://img.gkbcdn.com/p/2020-05-12/HXSJ-S3-1080P-HD-Webcam-For-Desktop-PC-Laptop-Black-904035-._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"HXSJ S3 1080P HD Webcam 5MP Auto Focus Built-in" ,
+
+        price:"₹2588.75",
+        strickthrougnprice:"₹4051.97",
+        discount:"28% OFF",
+        productPage : "productpage.html"
+    },
+    {photo:"https://img.gkbcdn.com/p/2020-05-14/lf01-1-white-folding-fan---screwdriver---dust-bag-1589438088530._w280_p1_.jpg",
+            image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+            name:"Smart Portable Folding Fan Adjustable Angle Mute Shaking" ,
+
+            price:"₹1931.84",
+            strickthrougnprice:"₹2853.95",
+            discount:"14% OFF",
+            productPage : "productpage.html"
+        },
+    {photo:"https://img.gkbcdn.com/p/2020-03-31/Baseus-Mobile-Adapter-Three-in-one-Interface-Black-900814-._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Baseus L49 Mobile Adapter Three-in-one Interface" ,
+
+        price:"₹1780.78",
+        strickthrougnprice:"₹2937.11",
+        discount:"35% OFF",
+        productPage : "productpage.html"
+    },  
+    
+    {photo:"https://img.gkbcdn.com/p/2020-03-31/Portable-Digital-Non-contact-Infrared-Forehead-Thermometer-Grey-White-900915-._w280_p1_.jpg",
+        image:"https://img.gkbcdn.com/s3/bn/2206/78x24-62a1beb42b40c92298f54b09.gif",
+        name:"Portable Digital Non-contact Infrared Forehead Thermometer" ,
+
+        price:"₹2898.16",
+        strickthrougnprice:"₹4267.12",
+        discount:"32% OFF",
+        productPage : "productpage.html"
+    },
+
+    
+];
+    //Mapping for buttom Content
+    let bc = document.querySelector("#buttomContent")
+
+    mapData(buttomData,bc);
+
+
+</script>
