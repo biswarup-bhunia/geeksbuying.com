@@ -9,6 +9,7 @@ function userLog(event){
      if(checkLog(obj.Email,obj.Password)===true){
         localStorage.setItem('logData',JSON.stringify(obj));
         alert('Log-In Sucessfull')
+        window.location.href='index.html'
      }
      else{
         alert('Invalied Email And Password');
