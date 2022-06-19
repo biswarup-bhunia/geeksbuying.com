@@ -291,7 +291,7 @@
                 </select>
             </div>
             <div>
-                <input style="padding:10px 285px 10px 10px;margin-left: 5px;" type="button" value="Search by Keywords............">
+                <input style="padding:10px 285px 10px 10px;margin-left: 5px;" type="text" value="" placeholder="Search by Keywords............">
             </div>
             <div >
                 <img src="https://media.istockphoto.com/photos/magnifier-glass-picture-id519752711?b=1&k=20&m=519752711&s=170667a&w=0&h=HalwVk67OygzmYD6Uh8qhwCUWEot8bXDHKYLKs9Dsnc=" alt="">   
@@ -506,28 +506,33 @@
 
     //for Brand Image
     let brandImage = [
-        {   image:"https://img.gkbcdn.com/s3/b/eleglide.jpg" },
-        {   image:"https://img.gkbcdn.com/s3/b/Logo/roborock.jpg" },
-        {   image:"https://img.gkbcdn.com/s3/b/Logo/Viomi.jpg" },
-        {   image:"https://img.gkbcdn.com/s3/b/2006/fiido.jpg?v=-674318602" },
-        {   image:"https://img.gkbcdn.com/s3/b/Logo/tronsmart.jpg?v=788944783" },
-        {   image:"https://img.gkbcdn.com/s3/b/Logo/one-netbook.jpg" },
-        {   image:"https://img.gkbcdn.com/s3/b/ado.jpg" },
-        {   image:"https://img.gkbcdn.com/s3/b/Logo/himo.jpg?v=1500289693" },
-        {   image:"https://img.gkbcdn.com/s3/b/Logo/jimmy.jpg?v=-219567574" },
-        {   image:"https://img.gkbcdn.com/s3/b/artillery.jpg" },
-        {   image:"https://img.gkbcdn.com/s3/b/proscenic-6HykTHuh.jpg" },
-        {   image:"https://img.gkbcdn.com/s3/b/bezior.jpg" },
-        {   image:"https://img.gkbcdn.com/s3/b/engwe.jpg" },
-        {   image:"https://img.gkbcdn.com/s3/b/kugookirin-6TbAI6pr.jpg" },
+        {   image:"https://img.gkbcdn.com/s3/b/eleglide.jpg" , productLink:"eleglide.html"},
+        {   image:"https://img.gkbcdn.com/s3/b/Logo/roborock.jpg" , productLink:"eleglide.html"},
+        {   image:"https://img.gkbcdn.com/s3/b/Logo/Viomi.jpg" , productLink:"eleglide.html"},
+        {   image:"https://img.gkbcdn.com/s3/b/2006/fiido.jpg?v=-674318602" , productLink:"eleglide.html"},
+        {   image:"https://img.gkbcdn.com/s3/b/Logo/tronsmart.jpg?v=788944783" , productLink:"eleglide.html"},
+        {   image:"https://img.gkbcdn.com/s3/b/Logo/one-netbook.jpg" , productLink:"eleglide.html"},
+        {   image:"https://img.gkbcdn.com/s3/b/ado.jpg" , productLink:"eleglide.html"},
+        {   image:"https://img.gkbcdn.com/s3/b/Logo/himo.jpg?v=1500289693" , productLink:"eleglide.html"},
+        {   image:"https://img.gkbcdn.com/s3/b/Logo/jimmy.jpg?v=-219567574" , productLink:"eleglide.html"},
+        {   image:"https://img.gkbcdn.com/s3/b/artillery.jpg" , productLink:"eleglide.html"},
+        {   image:"https://img.gkbcdn.com/s3/b/proscenic-6HykTHuh.jpg" , productLink:"eleglide.html"},
+        {   image:"https://img.gkbcdn.com/s3/b/bezior.jpg" , productLink:"eleglide.html"},
+        {   image:"https://img.gkbcdn.com/s3/b/engwe.jpg" , productLink:"eleglide.html"},
+        {   image:"https://img.gkbcdn.com/s3/b/kugookirin-6TbAI6pr.jpg" , productLink:"eleglide.html"},
 
     ];
     function imageMap(brandImage){
         brandImage.map(function(el){
             let a = document.createElement("div");
             let b = document.createElement("img");
+            let c= document.createElement("a");
+
+            c.setAttribute("href",el.productLink);
             b.setAttribute("src", el.image);
-            a.append(b);
+            b.style.width = "100%";
+            c.append(b);
+            a.append(c);
             document.querySelector(".brand_image").append(a);
         })
     };
